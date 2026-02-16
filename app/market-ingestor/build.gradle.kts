@@ -10,8 +10,12 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation(project(":shared-lib"))
+
+    implementation("com.sparkjava:spark-core:2.9.4")
+    implementation("org.slf4j:slf4j-simple:2.0.7")
+
+    implementation("io.lettuce:lettuce-core:6.2.6.RELEASE")
 }
 
 tasks.test {
